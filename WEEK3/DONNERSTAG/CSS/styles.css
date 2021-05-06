@@ -1,0 +1,28 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+}
+h1{
+    margin: 2rem;
+}
+main {
+    display: flex;
+    flex-wrap: wrap;
+    border: solid 2px #58595B;
+    border-radius: 4px;
+    margin: 2rem;
+}
+
+section {
+    width: 20rem;
+    height: 3rem;
+    border-radius: 3px;
+    margin: 1.5rem;
+    flex: 1 0 auto;
+    background-color: rgb(107, 150, 146);
+    padding-top: .75rem;
+    padding-left: 3px;
+}

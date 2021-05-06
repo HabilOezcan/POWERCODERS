@@ -1,0 +1,108 @@
+*{
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+label[for='trigger-nav']{
+    border: 3px solid black;
+    border-width: 3px 0;
+    position: fixed;
+    top: 3rem;
+    right: 2rem;
+    width: 4rem;
+    height: 4rem;
+    cursor: pointer;
+    text-indent: -99999px;
+    z-index: 1;
+}
+
+label span {
+    opacity: 0.01;
+    right: -100vw;
+    font-size: 1px;
+    height: .5rem;
+}
+
+label[for='trigger-nav']::before, 
+label[for='trigger-nav']::after{
+    border: 3px solid rgb(196, 18, 18);
+    border-width: 3px 0;
+    content: '';
+    display: block;
+}
+
+#trigger-nav{
+    opacity: 0.01;
+    position: fixed;
+    right: -1rem;
+}
+
+
+#trigger-nav:checked + label{
+    border: 0;    
+}
+
+#trigger-nav:checked + label::after{
+    transform: rotate(45deg);    
+}
+
+#trigger-nav:checked ~ nav{
+    right: 0;    
+}
+
+nav {
+    background-color:#6593A6;
+    position: fixed;
+    right: -80%;
+    width: 80%;
+    height: 100%;
+    transition: right 1s;/*transitioni ana rule icinde yazacaksin ki anliyacak hayvan*/
+}
+
+li {
+    border-radius: 5px;
+    margin: 1rem;
+    padding: 1rem;
+    background-color:#561a5c;
+    text-decoration: none;
+    flex: 1 0 0;
+}
+
+nav ul{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0;
+}
+
+nav a {
+    color: cadetblue;
+    display: block;
+    padding: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 3.5rem;
+    font-size: 2.5vw;
+    text-decoration: none;
+    padding: 2rem;
+}
+
+@media screen and (min-width:50em){
+    label[for='trigger-nav']{
+        right: -100%;
+    }
+    nav{
+        position: static;
+        width: 100%;
+    }
+    nav ul{
+        flex-direction: row;
+    }
+    nav a {
+        font-size: 2.5vw;
+    }
+}

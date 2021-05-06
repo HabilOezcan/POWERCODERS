@@ -1,0 +1,10 @@
+input{
+    background-color: blue;
+    width: 5vw;
+    height: auto;
+    border: brown 2px solid;
+}
+
+.inputClass{
+    background-color: burlywood;
+}

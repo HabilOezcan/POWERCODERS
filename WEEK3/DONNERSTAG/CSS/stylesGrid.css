@@ -1,0 +1,24 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+}
+h1{
+    margin: 2rem;
+}
+main {
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    border: solid 2px #58595B;
+    border-radius: 4px;
+    margin: 2rem;
+}
+
+section {
+    border-radius: 3px;
+    margin: 1rem;
+    padding: 1rem;
+    background-color:#6593A6;
+}
