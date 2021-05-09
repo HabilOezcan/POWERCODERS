@@ -52,6 +52,7 @@ const getWaterInfo = (pData, pPosition)=>{
         /**
          * Burada Deniz durumu icin gerekli islemler yapilacak
          */
+        //weatherInfoDom(pPosition);
         seasInfoDom(pPosition);
     }else
     {
