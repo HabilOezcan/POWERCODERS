@@ -1,19 +1,125 @@
 /* Always set the map height explicitly to define the size of the div
        * element that contains the map. */
-#mapid {
-  width: 40vw;
-  height: 40vw;
-  border: mediumseagreen 1rem solid;
+* {
+      box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
 }
-#weatherContent, #seasContent{
-  width: 30vw;
-  height: 20vw;
-  border: 1rem solid mediumpurple;
+body{
+  background-image: url('../IMGs/clouds/Watch-the-weather-image1-hero.jpg');
+  -webkit-font-smoothing: antialiased;
 }
-/* Optional: Makes the sample page fill the window. */
-html,
-body {
-  height: 100%;
+header nav ul{
+  list-style-type: none;
   margin: 0;
   padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+header nav li {
+  float: left;
+  border-right:1px solid #bbb;
+}
+
+header nav li:last-child {
+  border-right: none;
+}
+
+header nav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+header nav li a:hover:not(.active) {
+  background-color: #111;
+}
+
+header nav .active {
+  background-color: #1b5e9e;
+}
+
+h1, h2, p, footer{
+  margin-left: 2rem;
+  color:#18232c ;
+}
+
+#mapid {
+  width: 40vw;
+  min-width: 250px;
+  min-height: 250px;
+  height: 40vw;
+  border: #111 .2rem solid;
+  margin-left: 31%;;
+}
+
+#weatherContent,
+#seasContent {
+  display: flex;
+  width: 40vw;
+  min-width: 250px;
+  height: auto;
+  border: .2rem solid #111;
+  margin-left: 31%;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 1.25rem;
+}
+
+#weatherContent ul,
+#seasContent ul {
+  list-style-type: none;
+  padding-inline-start: 10px;
+  color:#072a30;
+}
+
+#weatherContent img,
+#seasContent img{
+  width: 20px;
+  height: 20px;
+} 
+
+#preHourBtn,
+#nextHourBtn {
+  cursor: pointer;
+  width: auto;
+  height: 2rem;
+  padding: 2px;
+  color: rgb(49, 45, 45);
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+#preHourBtn{
+  order: 1;
+}
+#infoSea{
+  order:2;
+  width: 25vw;
+  min-width: 200px;
+  margin:0;
+  padding: 0;
+}
+#nextHourBtn{
+  order:3;
+  right: 0;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+#preHourBtn:hover,
+#nextHourBtn:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+main, footer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
 }
